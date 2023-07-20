@@ -6,10 +6,10 @@ include_once(__DIR__.'/config.php');
 if($_POST) {
 	$q1 = $q2 = $q3 = $q4 = $q5 = $q6 = $q7 = $q8 = $q9 = NULL;
 	$q1 = $mysqli -> real_escape_string($_POST['amount']);
-	$q2 = $mysqli -> real_escape_string($_POST['pregnant']);
+	$q2 = $_POST['pregnant'];
 	$q2 = implode(", ",array_values($q2));
 	$q3 = $mysqli -> real_escape_string($_POST['age']);
-	$q4 = $mysqli -> real_escape_string($_POST['pregnant-reason']);
+	$q4 = $_POST['pregnant-reason'];
 	$q4 = implode(", ",array_values($q4));
 	$q5 = $mysqli -> real_escape_string($_POST['pregnant-time']);
 	$q6 = $mysqli -> real_escape_string($_POST['pregnant-disc']);
